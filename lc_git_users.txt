@@ -4,3 +4,4 @@ connor,farrell,connor.farrell@ucalgary.ca,ConnorFLC10,2021_ENCM369
 Aly,Elsayed,aly.elsayed1@ucalgary.ca,aly-elsayed,ALYLC10ENCM369
 Lee,Evans,lee.evans@ucalgary.ca,Lee-F-Evans,2021_ENCM369
 Bilal,Dawood,bilal.dawood@ucalgary.ca,BilalDawood01,2021_ENCM369
+Nicholas,Moreno,nicholas.morenomansf@ucalgary.ca,NicholasMoreno-tech,2021_ENCM369
