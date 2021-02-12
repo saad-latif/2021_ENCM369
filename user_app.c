@@ -92,16 +92,18 @@ Promises:
 */
 void UserAppRun(void)
 {
-if(u8 u8counter<0x40){
-    u8 u8counter++;
-    __delay_ms(250); //Delay 250ms after each count
+u8 u8counter;
+    u32 u32counter;
+    if(u8counter<0x40){
+        u8counter++;
+        for(u32counter = 0; u32counter<400000;u32counter++) //Delay 250ms after each count
+        {
+        }
     }
-else{
-    u8 u8counter=0; //Set counter to 0 if counter=0x40
+    else{
+        u8counter=0; //Set counter to 0 if counter=0x40
     }
-    
-
-PORTA=0x80+u8 u8counter OR LATA ^ u8 u8counter; //RA7 always stays high
+    LATA=0x80+u8counter; //RA7 always stays high
 
 
 } /* end UserAppRun */
