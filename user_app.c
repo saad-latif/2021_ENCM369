@@ -75,16 +75,7 @@ Promises:
 */
 void UserAppInitialize(void)
 {
-if(u8 u8counter<0x40){
-    u8 u8counter++;
-    __delay_ms(250); //Delay 250ms after each count
-    }
-else{
-    u8 u8counter=0; //Set counter to 0 if counter=0x40
-    }
-    PORTA=0x80+u8 u8counter OR LATA ^ u8 u8counter; //RA7 always stays high
-
-    } /* end UserAppInitialize() */
+  } /* end UserAppInitialize() */
 
   
 /*!----------------------------------------------------------------------------------------------------------------------
@@ -101,6 +92,16 @@ Promises:
 */
 void UserAppRun(void)
 {
+if(u8 u8counter<0x40){
+    u8 u8counter++;
+    __delay_ms(250); //Delay 250ms after each count
+    }
+else{
+    u8 u8counter=0; //Set counter to 0 if counter=0x40
+    }
+    
+
+PORTA=0x80+u8 u8counter OR LATA ^ u8 u8counter; //RA7 always stays high
 
 
 } /* end UserAppRun */
