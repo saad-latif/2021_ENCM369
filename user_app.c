@@ -73,11 +73,45 @@ Promises:
 - NONE
 
 */
-void UserAppInitialize(void)
+void UserAppRun(void)
 {
+    static u32 u32Counter = 0x80;
+    static u32 u32PrevButton = 0;
+    u32 u32Detect = RB5;
+    
+    //if the previous button state is zero, which it will be at first
+    //set the "previous" value to zero
+    if (u32Detect == 0x00)
+    {
+        u32PrevButton = u32Detect;
+    }
+    
+    //if the previous value is the same as detected
+    //keep it that way
+    else if (u32PrevButton == u32Detect)
+    {
+        u32PrevButton = u32Detect;
+    }
+    
+    //otherwise it'll be different; so if the counter isn't maxed out, 
+    //increment the counter and set LATA to that incremented value
+    else if (u32Counter < 0xC0)
+    {
+        u32Counter++;
+        LATA = u32Counter;
+        u32PrevButton = u32Detect;
+    }
+    
+    //otherwise it'll be maxed out, so reset it
+    //and reset LATA
+    else
+    {
+        u32Counter = 0x80;
+        LATA = u32Counter;
+        u32PrevButton = u32Detect;
+    }
 
-
-} /* end UserAppInitialize() */
+} /* end UserAppRun */
 
   
 /*!----------------------------------------------------------------------------------------------------------------------
