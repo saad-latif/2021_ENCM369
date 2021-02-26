@@ -73,6 +73,25 @@ Promises:
 - NONE
 
 */
+void UserAppInitialize(void)
+{
+
+
+} /* end UserAppInitialize() */
+
+  
+/*!----------------------------------------------------------------------------------------------------------------------
+@fn void UserAppRun(void)
+
+@brief Application code that runs once per system loop
+
+Requires:
+- 
+
+Promises:
+- 
+
+*/
 void UserAppRun(void)
 {
     static u32 u32Counter = 0x80;
@@ -110,25 +129,6 @@ void UserAppRun(void)
         LATA = u32Counter;
         u32PrevButton = u32Detect;
     }
-
-} /* end UserAppRun */
-
-  
-/*!----------------------------------------------------------------------------------------------------------------------
-@fn void UserAppRun(void)
-
-@brief Application code that runs once per system loop
-
-Requires:
-- 
-
-Promises:
-- 
-
-*/
-void UserAppRun(void)
-{
-
 
 } /* end UserAppRun */
 
