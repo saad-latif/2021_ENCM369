@@ -56,10 +56,14 @@ void main(void)
     /* Applications */
     UserAppRun();
    
-     
     /* System sleep */
     HEARTBEAT_OFF();
     SystemSleep();
+    
+    // Delay by 1 ms and wait for TMR0IF to be set (end of the timer)
+    TimeXus(1000);
+    while(PIR3bits.TMR0IF == 0);
+    
     HEARTBEAT_ON();
     
   } /* end while(1) main super loop */

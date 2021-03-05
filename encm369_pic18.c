@@ -1,5 +1,5 @@
 /*!**********************************************************************************************************************
-@file encm369_pic18.c                                                                
+@file encm369_pic18.c
 @brief This file provides core and GPIO functions for the ENCM 369 PIC activities.
 
 
@@ -14,10 +14,10 @@ TYPES
 - NONE
 
 PUBLIC FUNCTIONS
-- 
+-
 
 PROTECTED FUNCTIONS
-- 
+-
 
 ***********************************************************************************************************************/
 
@@ -49,7 +49,7 @@ Function Definitions
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-/*! @protectedsection */                                                                                            
+/*! @protectedsection */
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 
@@ -69,8 +69,8 @@ Promises:
 */
 void ClockSetup(void)
 {
- 
-  
+
+
 } /* end ClockSetup */
 
 
@@ -88,10 +88,11 @@ Promises:
 */
 void GpioSetup(void)
 {
-  ANSELA = 0x00;// Initialize pins to digital pins
-    TRISA = 0x00;// Initialize pins to output
-    LATA = 0x80;// Initialize pin RA7 to high
-  
+    // Set up the RAx ports for turning the LEDs ON and OFF
+    TRISA = 0x00;
+    ANSELA = 0x00;
+    PORTA = 0xC0;
+
 } /* end GpioSetup() */
 
 
@@ -109,9 +110,9 @@ Promises:
 */
 void SysTickSetup(void)
 {
-  G_u32SystemTime1ms = 0;      
-  G_u32SystemTime1s  = 0;   
-  
+  G_u32SystemTime1ms = 0;
+  G_u32SystemTime1s  = 0;
+
 } /* end SysTickSetup() */
 
 
@@ -119,37 +120,34 @@ void SysTickSetup(void)
 /*!---------------------------------------------------------------------------------------------------------------------
 @fn void SystemSleep(void)
 
-@brief Puts the system into sleep mode.  
+@brief Puts the system into sleep mode.
 
 
 Requires:
-- 
- * 
+-
+ *
 Promises:
-- 
+-
 
 */
 void SystemSleep(void)
-{    
-  
+{
+
 } /* end SystemSleep(void) */
 
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-/*! @publicsection */                                                                                            
+/*! @publicsection */
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
-/*! @privatesection */                                                                                            
+/*! @privatesection */
 /*--------------------------------------------------------------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* End of File */
 /*--------------------------------------------------------------------------------------------------------------------*/
-
-
-
