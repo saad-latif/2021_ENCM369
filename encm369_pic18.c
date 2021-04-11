@@ -88,8 +88,10 @@ Promises:
 */
 void GpioSetup(void)
 {
-  
-  
+    TRISA = 0x00;
+    ANSELA = 0x00;
+    
+    DAC1CON = 0xA0;
 } /* end GpioSetup() */
 
 

@@ -58,9 +58,15 @@ void main(void)
    
      
     /* System sleep */
-    HEARTBEAT_OFF();
+//    HEARTBEAT_ON();
     SystemSleep();
-    HEARTBEAT_ON();
+    
+    TimeXus(11);
+    while(PIR3bits.TMR0IF != 1);
+        
+//    DAC1DATL += 4;
+//        
+//    HEARTBEAT_OFF();
     
   } /* end while(1) main super loop */
   
