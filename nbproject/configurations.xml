@@ -12,6 +12,8 @@
       <itemPath>../../../Desktop/PIC_7/pic18f27q43.h</itemPath>
       <itemPath>../../../Desktop/PIC_7/xc.h</itemPath>
       <itemPath>../../../Desktop/PIC_7/encm369_pic18.h</itemPath>
+      <itemPath>interrupts.h</itemPath>
+      <itemPath>music.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,10 +22,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>../../../Desktop/PIC activities/ProjectTemplate/encm369_pic18.c</itemPath>
       <itemPath>../../../Desktop/PIC activities/ProjectTemplate/main.c</itemPath>
       <itemPath>../../../Desktop/PIC activities/ProjectTemplate/user_app.c</itemPath>
       <itemPath>../../../Desktop/PIC_7/encm369_pic18.c</itemPath>
+      <itemPath>interrupts.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -34,6 +36,7 @@
   <sourceRootList>
     <Elem>../../../Desktop/PIC activities/ProjectTemplate</Elem>
     <Elem>../../../Desktop/PIC_7</Elem>
+    <Elem>.</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

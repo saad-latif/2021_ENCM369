@@ -15,6 +15,7 @@
             <sourceRootList>
                 <sourceRootElem>../../../Desktop/PIC activities/ProjectTemplate</sourceRootElem>
                 <sourceRootElem>../../../Desktop/PIC_7</sourceRootElem>
+                <sourceRootElem>.</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
